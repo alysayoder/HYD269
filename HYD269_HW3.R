@@ -1,11 +1,14 @@
 x <- c(0,70,40, 0, 40, 40,cenx)
 y <- c(10,0,70, 10, 70, 32,ceny)
+xpoints <- c(0,70,40,0,40)
+ypoints <- c(10,0,70,10,70)
 # label points A, B, C with their head values
 name <- c("A, h=9", "B, h=50", "C, h=120", "", "", "(40,32)", "centroid")
 df = data.frame(xpoints, ypoints)
 
 # plot triangle showing the point in question
-plot(df, main="Finite Element Triangle")
+plot(df, main="Finite Element Triangle", xlim=c(-10,80), ylim = c(-10,80))
+
 lines(xpoints,ypoints, type = "l")
 text(x,y,labels=name)
 
